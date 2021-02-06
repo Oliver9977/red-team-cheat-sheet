@@ -40,4 +40,10 @@ GadgetToJScript.exe -a test.dll -w [hta/js/vba/vbs]
     $filename = "C:\tools\donut\loader.bin"
     [system.Convert]::toBase64string([IO.File]::ReadAllBytes($filename)) | Clip
     ```
-  * 
+
+* Check if aspx
+  * ```
+    <%@ Page Language="C#" %><script runat="server"></script>
+    ```
+
+* can use msf + encoder for aspx payload. 
