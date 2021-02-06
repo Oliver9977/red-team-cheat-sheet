@@ -46,4 +46,4 @@ GadgetToJScript.exe -a test.dll -w [hta/js/vba/vbs]
     <%@ Page Language="C#" %><script runat="server"></script>
     ```
 
-* can use msf + encoder for aspx payload. 
+* can use msf + encoder for aspx payload (on workstation). 
