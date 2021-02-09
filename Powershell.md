@@ -139,8 +139,8 @@ get-command
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out cert.pem
 openssl x509 -in cert.pem -noout -sha1 -fingerprint | cut -d "=" -f 2 | tr -d ":"
 python ReverseSocksProxyHandler.py 443 1080 ./cert.pem ./private.key
-
-
+```
+```
 Invoke-ReverseSocksProxy -remotePort 443 -remoteHost 192.168.49.130 
 
 # Go through the system proxy:
