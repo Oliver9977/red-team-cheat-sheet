@@ -10,7 +10,7 @@ C:\Windows\sysnative\WindowsPowerShell\v1.0\powershell.exe -ep bypass
 ```
 & .\hidden-test.exe 2>&1
 ```
-* from ps-shell
+* PS-Run without output
 ```
 Start-Process notepad.exe
 ```
