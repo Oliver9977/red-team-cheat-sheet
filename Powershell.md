@@ -73,10 +73,15 @@ $a=[Ref].Assembly.GetTypes();Foreach($b in $a) {if ($b.Name -like "*iUtils") {$c
 ```
 
 ## PS
+* The native ``IncludeUserName`` need admin privilege
 ```
 Get-Process -IncludeUserName | Format-Table Id,Username,Name,si,FileName -AutoSize
 Get-Process | Format-Table Id,Name,si,FileName -AutoSize
-
+```
+```
+$owners = @{}
+gwmi win32_process |% {$owners[$_.handle] = $_.getowner().user}
+get-process | select processname,Id,@{l="Owner";e={$owners[$_.id.tostring()]}}
 ```
 
 ## Applocker
