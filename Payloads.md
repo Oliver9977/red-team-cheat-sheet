@@ -3,7 +3,7 @@
 
 * Rundll32 with C# dll (https://blog.xpnsec.com/rundll32-your-dotnet/)
   * Rundll32 will require DLL_PROCESS_ATTACH to return
-  * Ruldll32 will auto exit if entry point function exit 
+  * Rundll32 will auto exit if entry point function exit 
 
 ```
 ildasm.exe /out:TestUnmanaged.il CSharpDll.dll
@@ -46,4 +46,4 @@ GadgetToJScript.exe -a test.dll -w [hta/js/vba/vbs]
     <%@ Page Language="C#" %><script runat="server"></script>
     ```
 
-* can use msf + encoder for aspx payload (on workstation). 
+* can use msf + encoder for aspx payload (on Windows 10 workstation). 

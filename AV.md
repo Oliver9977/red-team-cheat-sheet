@@ -6,4 +6,4 @@
 * ``Add-Type`` blocked by AMSI on server 2019
 
 ## List of blocked ps1
-* powerview
+* powerview (need remove comments)
