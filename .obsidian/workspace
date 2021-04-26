@@ -1,0 +1,102 @@
+{
+  "main": {
+    "id": "c97ea73722ea1ce3",
+    "type": "split",
+    "children": [
+      {
+        "id": "f7e05645e4a2ee2c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "AV.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fe6dede9045c1374",
+    "type": "split",
+    "children": [
+      {
+        "id": "9f078a5e9661e6a8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "801d06d8a878b15b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "f1d31cde6d83a558",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 350
+  },
+  "right": {
+    "id": "3266354d452c65fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "aafe389cf0175b1f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "150f48595096d16a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "AV.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "f7e05645e4a2ee2c",
+  "lastOpenFiles": [
+    "AV.md",
+    "Kerberos/Constrained Delegation.md",
+    "AD Relation/WriteDACL.md",
+    "AD Relation/BloodHound.md",
+    "AD Relation/GenericAll.md",
+    "Kerberos/Unconstrained Delegation.md",
+    "Kerberos/Resource-Based Constrained Delegation.md",
+    "Kerberos/Kerberosasting.md",
+    "PE/SelmpersonatePrivilege.md",
+    "PE/Powerup.md"
+  ]
+}
