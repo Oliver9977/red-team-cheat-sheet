@@ -1,0 +1,2 @@
+Resource-Based Constrained Delegation
+Targeted Kerberoasting

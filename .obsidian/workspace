@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Token.md",
+            "file": "PE/Applocker.md",
             "mode": "preview"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309
+    "width": 355
   },
   "right": {
     "id": "3266354d452c65fd",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Token.md",
+                "file": "PE/Applocker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "f7e05645e4a2ee2c",
   "lastOpenFiles": [
-    "Token.md",
-    "README.md",
-    "Process Injection.md",
-    "Powershell.md",
-    "Payloads.md",
+    "PE/Applocker.md",
+    "PE/SelmpersonatePrivilege.md",
+    "PE/Powerup.md",
     "OverPassHash.md",
-    "MSSQL.md",
-    "Linux.md",
-    "Lateral Movement.md",
-    "AV.md"
+    "AD Relation/GenericWrite.md",
+    "AD Relation/GenericAll.md",
+    "GenericWrite.md",
+    "AV.md",
+    "Untitled.md",
+    "AD Relation/ReadLAPSPassword.md"
   ]
 }
