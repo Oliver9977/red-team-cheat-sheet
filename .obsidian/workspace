@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "AV.md",
+            "file": "Token.md",
             "mode": "preview"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 350
+    "width": 309
   },
   "right": {
     "id": "3266354d452c65fd",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AV.md",
+                "file": "Token.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "f7e05645e4a2ee2c",
   "lastOpenFiles": [
-    "AV.md",
-    "Kerberos/Constrained Delegation.md",
-    "AD Relation/WriteDACL.md",
-    "AD Relation/BloodHound.md",
-    "AD Relation/GenericAll.md",
-    "Kerberos/Unconstrained Delegation.md",
-    "Kerberos/Resource-Based Constrained Delegation.md",
-    "Kerberos/Kerberosasting.md",
-    "PE/SelmpersonatePrivilege.md",
-    "PE/Powerup.md"
+    "Token.md",
+    "README.md",
+    "Process Injection.md",
+    "Powershell.md",
+    "Payloads.md",
+    "OverPassHash.md",
+    "MSSQL.md",
+    "Linux.md",
+    "Lateral Movement.md",
+    "AV.md"
   ]
 }

